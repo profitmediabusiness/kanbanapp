@@ -15,11 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('users', [HomeController::class, 'create']);
-    // ->name('hello');
 
 Route::prefix('roles')
 ->name('roles.')
