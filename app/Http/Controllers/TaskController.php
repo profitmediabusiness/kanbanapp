@@ -75,4 +75,5 @@ public function edit($id)
 
     return view('tasks.edit', ['pageTitle' => $pageTitle, 'task' => $task]);
 }
+
 }
