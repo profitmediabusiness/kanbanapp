@@ -1,8 +1,8 @@
+
 @extends('layouts.master')
 
 @section('pageTitle', $pageTitle)
 @section('main')
-
 
 <div class="form-container">
     <h1 class="form-title">{{ $pageTitle }}</h1>
@@ -33,5 +33,9 @@
       </div>
       <button type="button" class="form-button">Submit</button>
     </form>
+
   </div>
 @endsection
+
+  </div>
+
