@@ -33,7 +33,6 @@
       </div>
       <button type="button" class="form-button">Submit</button>
     </form>
-
   </div>
 @endsection
 
