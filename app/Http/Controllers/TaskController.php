@@ -42,4 +42,24 @@ public function create()
     return view('tasks.create', ['pageTitle' => $pageTitle, ]);
 }
 
+public function store(Request $request)
+    {
+        $request->validate(
+            [
+                'name' => 'required',
+                'due_date' => 'required',
+                'status' => 'required',
+            ],
+            $request->all()
+        );
+        
+        Task::create([
+            'name' => $request->name,
+            'detail' => $request->detail,
+            'due_date' => $request->due_date,
+            'status' => $request->status,
+        ]);
+
+        return redirect()->route('tasks.index');
+    }
 }
