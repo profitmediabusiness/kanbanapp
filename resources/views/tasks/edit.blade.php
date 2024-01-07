@@ -5,14 +5,15 @@
 @section('main')
   <div class="form-container">
     <h1 class="form-title">{{ $pageTitle }}</h1>
-    <form class="form">
+    <form class="form" method="POST" action="{{ route('tasks.update', ['id' => $task->id]) }}">
+      @method('PUT')
+      @csrf
       <div class="form-item">
         <label>Name:</label>
-        <input
-          class="form-input"
-          type="text"
-          value="{{ $task->name }}"
-        >
+        <input 
+        class="form-input" 
+        type="text" 
+        value="{{ old('name', $task->name) }}" name="name">
       </div>
 
       <div class="form-item">
